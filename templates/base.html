@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title  %}
+      blog
+    {% endblock title  %}</title>
+</head>
+<body>
+    {% block search %}
+    <div>
+        <form method="get" action="article" >
+            <input type="text" name='q'>
+            <input type="submit">
+        
+        </form>
+        
+        </div>
+
+        <div style="border: 1px  red solid ; 
+        margin: 10px 10px ;
+        height: auto ;
+        padding: 10px 20px;">
+       <h1>{{search.title}} </h1>      
+        <h2 style="color: gray;">{{search.subtitle}} </h2> 
+       <p> {{search.content}} </p>
+
+        </div>
+    {% endblock search %}
+
+    {% block content %}
+    <h1>defaul message </h1>
+    {% endblock content %}
+</body>
+</html>

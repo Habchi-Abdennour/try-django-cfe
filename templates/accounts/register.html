@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+    
+ 
+    {% block content %}
+    {% if not user.is_authenticated %}
+
+      <center><h1>Login Page</h1></center>
+      <div style="margin-top: 20px;">
+        <form action="" method="post">
+            {% csrf_token %}
+                {{form.as_div}}
+            <button type="submit">register </button>
+        </form>
+        <p>Aleardy have an account ? Please <a href="/login">Login</a></p>
+      </div>
+      {% else %}
+     <p>You Aleardy Logged in and cannont register . Would you like to <a href="/logout/">logout</a></p>
+      {% endif %}
+      
+    {% endblock content %}

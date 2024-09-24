@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+      search
+    {% endblock title %}</title>
+</head>
+<body style="margin: 10px 10px ;">
+
+
+        <div style="border: 1px  red solid ; 
+        margin: 10px 10px ;
+        height: auto ;
+        padding: 10px 20px;">
+       <h1>{{search.title}} </h1>      
+        <h2 style="color: gray;">{{search.subtitle}} </h2> 
+       <p> {{search.content}} </p>
+
+        </div>
+
+        {% block content %}
+          <div style="padding:10px 20px ;
+          border: 1px solid rebeccapurple;">
+        <p>            <h1> This is shlould result of search </h1><br>
+            <h2>if u dont know how to search there is a box form in the top-left u can type by ID and u will get your reasult search</h2>
+        </p>
+
+          </div>
+        {% endblock content %}
+</body>
+</html>

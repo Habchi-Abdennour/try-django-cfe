@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+        article_Detail
+    {% endblock title %}</title>
+</head>
+<body>
+    <center><h1>{{data.title}}</h1></center>
+    <p>{{data.content}}</p>
+    <br>
+    <div style="margin: 10px 20px ; color: red;">
+
+    {{data.published_date}}
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title  %}create_article{% endblock title  %}</title>
+</head>
+<body>
+   {% block content %}
+   <h1>create_article</h1>
+   {% if not created %}
+
+  
+   <div style="margin-top: 50px; width: 100% ;height: 35%;"></div>
+<form action="." method="post">
+    {% csrf_token %}
+    
+    {{forms.as_div}}
+
+    <button type="submit">Create article</button>
+</form>
+
+    {% else %}
+         <p>Your article create sucsusfully </p>
+        <p>follow the link to read your article </p>
+        <a href="{% url 'article_Detail' object.id %}">
+            {{object.title}}
+        </a>
+{% endif %}
+   {% endblock content %}
+</body>
+</html>

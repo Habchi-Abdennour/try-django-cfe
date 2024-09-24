@@ -1,0 +1,8 @@
+# Ignore all .log files
+*.log
+
+# Ignore all files in a specific folder
+folder_to_ignore/
+
+# Ignore a specific file
+secret_file.txt
